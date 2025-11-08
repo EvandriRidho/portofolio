@@ -32,8 +32,8 @@ export default function RootLayout({
           <Link href="/" className="hover:text-blue-400 transition">
             Home
           </Link>
-          <Link href="/about" className="hover:text-blue-400 transition">
-            About
+          <Link href="/skills" className="hover:text-blue-400 transition">
+            Skills
           </Link>
           <Link href="/projects" className="hover:text-blue-400 transition">
             Projects

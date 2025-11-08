@@ -12,7 +12,7 @@ export default function ProjectsPage() {
             link: "https://rizquna-frontend.vercel.app/",
             github: "https://github.com/EvandriRidho/Rizquna-Bakery",
         },
-        // Tambahin project lain 
+        // Klo ada tambahin
     ];
 
     return (
