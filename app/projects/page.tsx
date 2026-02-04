@@ -13,6 +13,14 @@ export default function ProjectsPage() {
             github: "https://github.com/EvandriRidho/Rizquna-Bakery",
         },
         // Klo ada tambahin
+        {
+            title: "Bank Lead Intelligence Portal",
+            description:
+                "Internal portal for bank lead management using MERN and Fast API. Features include AI Prediction, Export to Excel, and Data Visualization with ReChart.js.",
+            tech: ["React", "Node.js", "Express", "MongoDB", "Fast API"],
+            link: "https://blip-fe-phi.vercel.app/",
+            github: "https://github.com/Fauzi-1/Capstone"
+        }
     ];
 
     return (
