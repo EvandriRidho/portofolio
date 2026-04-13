@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Portofolio",
-  description: "Personal portfolio built with Next.js + TypeScript + Tailwind CSS",
+  description: "Personal portfolio Evandri Ridho Hasmono",
 };
 
 export default function RootLayout({
