@@ -1,27 +1,32 @@
 "use client";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+import tomatoLeafImage from "../images/tomatoleaf.png";
+import rizqunaBakeryImage from "../images/rizqunabakery.png";
 
 export default function Project() {
     const projects = [
         {
-            title: "TomatoNet",
+            title: "Tomato Leaf Diseases",
             description: "A machine learning model and web interface using Python and CNN to detect agricultural diseases specifically in tomato plants.",
             tech: ["Python", "CNN", "TensorFlow", "Streamlit"],
             link: "#",
-            color: "from-red-500/80 to-orange-500/80"
+            color: "from-red-500/80 to-orange-500/80",
+            image: tomatoLeafImage
         },
         {
             title: "Rizquna Bakery",
-            description: "Ecommerce website for bakery business. Features include product management, order management, and user management.",
+            description: "Ecommerce website for bakery business. Features include product management, order management, and auth system.",
             tech: ["React.js", "Node.js", "Express.js", "MongoDB"],
             link: "#",
-            color: "from-blue-500/80 to-cyan-500/80"
+            color: "from-blue-500/80 to-cyan-500/80",
+            image: rizqunaBakeryImage
         },
         {
             title: "GameShelf",
             description: "Website for Gamers to Discover, track, and share your favorite video games — all in one place.",
-            tech: ["Next.js", "TailwindCSS", "TypeScript", "PostgreSQL", "Prisma"],
+            tech: ["Next.js", "TailwindCSS", "PostgreSQL", "Prisma"],
             link: "#",
             color: "from-purple-500/80 to-pink-500/80"
         }
@@ -53,12 +58,23 @@ export default function Project() {
                         >
                             {/* Gradient Placeholder Images */}
                             <div className={`h-48 w-full bg-gradient-to-br ${item.color} relative overflow-hidden`}>
-                                <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors duration-300"></div>
-                                <motion.div
-                                    className="absolute -right-10 -bottom-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"
-                                    animate={{ scale: [1, 1.2, 1] }}
-                                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                ></motion.div>
+                                {item.image ? (
+                                    <Image
+                                        src={item.image}
+                                        alt={item.title}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                ) : (
+                                    <>
+                                        <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                                        <motion.div
+                                            className="absolute -right-10 -bottom-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"
+                                            animate={{ scale: [1, 1.2, 1] }}
+                                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                        ></motion.div>
+                                    </>
+                                )}
                             </div>
 
                             <div className="p-8 flex flex-col flex-grow">
