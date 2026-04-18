@@ -4,7 +4,7 @@ import {
     SiJavascript, SiTypescript, SiPhp, SiPython, SiNodedotjs, SiExpress,
     SiLaravel, SiHtml5, SiCss3, SiReact, SiNextdotjs, SiTailwindcss,
     SiBootstrap, SiSass, SiMongodb, SiMysql, SiPostgresql, SiPrisma,
-    SiGit, SiGithub, SiPostman, SiEslint, SiGnubash
+    SiGit, SiGithub, SiPostman, SiEslint, SiGnubash, SiFlask, SiFigma
 } from "react-icons/si";
 
 export default function Skill() {
@@ -31,6 +31,7 @@ export default function Skill() {
                 { name: "Node.js", icon: <SiNodedotjs className="w-6 h-6 text-[#339933]" /> },
                 { name: "Express.js", icon: <SiExpress className="w-6 h-6 text-slate-100" /> },
                 { name: "Laravel", icon: <SiLaravel className="w-6 h-6 text-[#FF2D20]" /> },
+                { name: "Flask", icon: <SiFlask className="w-6 h-6 text-[#000000]" /> },
                 { name: "MongoDB", icon: <SiMongodb className="w-6 h-6 text-[#47A248]" /> },
                 { name: "MySQL", icon: <SiMysql className="w-6 h-6 text-[#4479A1]" /> },
                 { name: "PostgreSQL", icon: <SiPostgresql className="w-6 h-6 text-[#4169E1]" /> },
@@ -45,6 +46,7 @@ export default function Skill() {
                 { name: "Postman", icon: <SiPostman className="w-6 h-6 text-[#FF6C37]" /> },
                 { name: "ESLint", icon: <SiEslint className="w-6 h-6 text-[#4B32C3]" /> },
                 { name: "Bash", icon: <SiGnubash className="w-6 h-6 text-[#4EAA25]" /> },
+                { name: "Figma", icon: <SiFigma className="w-6 h-6 text-[#F24E1E]" /> },
             ]
         }
     ];

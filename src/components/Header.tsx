@@ -6,24 +6,24 @@ export default function Header() {
         <section id="home" className="relative flex min-h-screen flex-col items-center justify-center text-center py-20 overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl opacity-20 pointer-events-none -z-10">
-                <motion.div 
-                    animate={{ 
+                <motion.div
+                    animate={{
                         scale: [1, 1.2, 1],
                         rotate: [0, 90, 0],
                     }}
-                    transition={{ 
+                    transition={{
                         duration: 20,
                         repeat: Infinity,
                         ease: "linear"
                     }}
                     className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500 rounded-full mix-blend-screen filter blur-[100px] opacity-70"
                 />
-                <motion.div 
-                    animate={{ 
+                <motion.div
+                    animate={{
                         scale: [1, 1.3, 1],
                         rotate: [0, -90, 0],
                     }}
-                    transition={{ 
+                    transition={{
                         duration: 25,
                         repeat: Infinity,
                         ease: "linear"
@@ -58,15 +58,18 @@ export default function Header() {
             >
                 Software Engineer <span className="hidden sm:inline">|</span><span className="sm:hidden block"></span> Machine Learning Engineer <span className="hidden sm:inline">|</span><span className="sm:hidden block"></span> Data Analyst
             </motion.p>
-            
+
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
                 className="mt-10 flex flex-col sm:flex-row gap-4"
             >
-                <a href="#projects" className="px-8 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)] transform hover:-translate-y-1">
-                    View My Work
+                <a
+                    href="/cv/CV_Evandri.pdf"
+                    download="CV_Evandri.pdf"
+                    className="px-8 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)] transform hover:-translate-y-1">
+                    Download CV
                 </a>
                 <a href="#contact" className="px-8 py-3 rounded-full bg-slate-900 text-slate-300 border border-slate-700 font-medium hover:bg-slate-800 hover:text-white transition-colors shadow-sm transform hover:-translate-y-1">
                     Get in Touch
