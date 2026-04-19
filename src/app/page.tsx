@@ -13,8 +13,8 @@ export default function Home() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Header />
         <AboutMe />
-        <Skill />
         <Project />
+        <Skill />
         <Contact />
       </div>
       <Footer />

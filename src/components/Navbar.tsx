@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { navLinks } from "@/constants/navLinks";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,18 +17,10 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const navLinks = [
-        { name: "About", href: "#about" },
-        { name: "Skills", href: "#skills" },
-        { name: "Projects", href: "#projects" },
-        { name: "Contact", href: "#contact" },
-    ];
-
     return (
         <nav
-            className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-                scrolled ? "bg-slate-950/80 backdrop-blur-md border-b border-slate-800 shadow-sm shadow-slate-900/50" : "bg-transparent absolute"
-            }`}
+            className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled ? "bg-slate-950/80 backdrop-blur-md border-b border-slate-800 shadow-sm shadow-slate-900/50" : "bg-transparent absolute"
+                }`}
         >
             <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
@@ -39,8 +32,8 @@ export default function Navbar() {
                     <ul className="hidden md:flex space-x-8 text-sm font-medium">
                         {navLinks.map((link) => (
                             <li key={link.name}>
-                                <Link 
-                                    href={link.href} 
+                                <Link
+                                    href={link.href}
                                     className="text-slate-300 hover:text-blue-400 transition-colors duration-200 relative group"
                                 >
                                     {link.name}

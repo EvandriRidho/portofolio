@@ -23,7 +23,27 @@ export default function AboutMe() {
                             transition={{ duration: 0.5, delay: 0.1 }}
                             className="text-slate-300 leading-relaxed text-lg"
                         >
-                            A final-year student at Universitas Gunadarma with a strong focus on information technology and data-driven solutions. I possess technical proficiency in Python, TypeScript, and PHP, which I have applied to diverse projects including a machine learning-based plant disease detection system (TomatoLeafDisease) and digital platforms like Rizquna Bakery and GameShelf. Known for strong problem-solving abilities, efficient time management, and a collaborative teamwork mindset, I am now seeking to leverage my skills as a Data Analyst or Software Engineer to build innovative and impactful digital solutions.
+                            As a final-year Information Technology student at Universitas Gunadarma, I am deeply passionate about building data-driven solutions and innovative digital platforms. I have cultivated a robust technical foundation in Python, TypeScript, and PHP, which allows me to seamlessly bridge the gap between complex analytical logic and engaging user experiences. I approach my work with a strong sense of purpose, driven by a commitment to continuous growth and building tools that create real value.
+                        </motion.p>
+
+                        <motion.p
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            className="text-slate-300 leading-relaxed text-lg"
+                        >
+                            My hands-on experience spans across several impactful projects where I take full ownership of the technical and architectural decisions I make. I developed "Tomato Leaf Diseases," a machine learning-based detection system that leverages computer vision to identify agricultural anomalies. Furthermore, I engineered end-to-end digital platforms like "Rizquna Bakery", "GameShelf", and "SparePart Monitoring". In every project I undertake, I stand firmly and proudly by my execution, ensuring the delivery of scalable, efficient, and well-crafted applications.
+                        </motion.p>
+
+                        <motion.p
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                            className="text-slate-300 leading-relaxed text-lg"
+                        >
+                            Beyond my technical capabilities, I bring strong problem-solving skills, efficient time management, and a collaborative yet highly independent mindset to the table. I am currently seeking opportunities as a Data Analyst or Software Engineer, where I can leverage my expertise to tackle complex challenges head-on. I am eager to bring my authentic self and technical adaptability to a forward-thinking team, ready to contribute to meaningful and impactful digital solutions.
                         </motion.p>
                     </div>
                 </div>

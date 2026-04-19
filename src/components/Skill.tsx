@@ -1,56 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import {
-    SiJavascript, SiTypescript, SiPhp, SiPython, SiNodedotjs, SiExpress,
-    SiLaravel, SiHtml5, SiCss3, SiReact, SiNextdotjs, SiTailwindcss,
-    SiBootstrap, SiSass, SiMongodb, SiMysql, SiPostgresql, SiPrisma,
-    SiGit, SiGithub, SiPostman, SiEslint, SiGnubash, SiFlask, SiFigma
-} from "react-icons/si";
+import { skillCategories } from "@/constants/skills";
 
 export default function Skill() {
-    const skillCategories = [
-        {
-            title: "Frontend",
-            skills: [
-                { name: "HTML", icon: <SiHtml5 className="w-6 h-6 text-[#E34F26]" /> },
-                { name: "CSS", icon: <SiCss3 className="w-6 h-6 text-[#1572B6]" /> },
-                { name: "JavaScript", icon: <SiJavascript className="w-6 h-6 text-[#F7DF1E]" /> },
-                { name: "TypeScript", icon: <SiTypescript className="w-6 h-6 text-[#3178C6]" /> },
-                { name: "React", icon: <SiReact className="w-6 h-6 text-[#61DAFB]" /> },
-                { name: "Next.js", icon: <SiNextdotjs className="w-6 h-6 text-slate-100" /> },
-                { name: "Tailwind", icon: <SiTailwindcss className="w-6 h-6 text-[#06B6D4]" /> },
-                { name: "Bootstrap", icon: <SiBootstrap className="w-6 h-6 text-[#7952B3]" /> },
-                { name: "Sass", icon: <SiSass className="w-6 h-6 text-[#CC6699]" /> },
-            ]
-        },
-        {
-            title: "Backend & Database",
-            skills: [
-                { name: "PHP", icon: <SiPhp className="w-6 h-6 text-[#777BB4]" /> },
-                { name: "Python", icon: <SiPython className="w-6 h-6 text-[#3776AB]" /> },
-                { name: "Node.js", icon: <SiNodedotjs className="w-6 h-6 text-[#339933]" /> },
-                { name: "Express.js", icon: <SiExpress className="w-6 h-6 text-slate-100" /> },
-                { name: "Laravel", icon: <SiLaravel className="w-6 h-6 text-[#FF2D20]" /> },
-                { name: "Flask", icon: <SiFlask className="w-6 h-6 text-[#000000]" /> },
-                { name: "MongoDB", icon: <SiMongodb className="w-6 h-6 text-[#47A248]" /> },
-                { name: "MySQL", icon: <SiMysql className="w-6 h-6 text-[#4479A1]" /> },
-                { name: "PostgreSQL", icon: <SiPostgresql className="w-6 h-6 text-[#4169E1]" /> },
-                { name: "Prisma", icon: <SiPrisma className="w-6 h-6 text-slate-100" /> },
-            ]
-        },
-        {
-            title: "Tools & Others",
-            skills: [
-                { name: "Git", icon: <SiGit className="w-6 h-6 text-[#F05032]" /> },
-                { name: "GitHub", icon: <SiGithub className="w-6 h-6 text-slate-100" /> },
-                { name: "Postman", icon: <SiPostman className="w-6 h-6 text-[#FF6C37]" /> },
-                { name: "ESLint", icon: <SiEslint className="w-6 h-6 text-[#4B32C3]" /> },
-                { name: "Bash", icon: <SiGnubash className="w-6 h-6 text-[#4EAA25]" /> },
-                { name: "Figma", icon: <SiFigma className="w-6 h-6 text-[#F24E1E]" /> },
-            ]
-        }
-    ];
-
     return (
         <section id="skills" className="py-20 relative">
             <motion.div
