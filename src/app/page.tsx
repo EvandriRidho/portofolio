@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
 import AboutMe from "@/components/AboutMe";
+import VideoSection from "@/components/VideoSection";
 import Skill from "@/components/Skill";
 import Project from "@/components/Project";
 import Contact from "@/components/Contact";
@@ -13,6 +14,7 @@ export default function Home() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Header />
         <AboutMe />
+        <VideoSection />
         <Project />
         <Skill />
         <Contact />
