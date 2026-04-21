@@ -56,7 +56,7 @@ export default function Header() {
                 transition={{ delay: 0.4, duration: 0.7, ease: "easeOut" }}
                 className="mt-6 text-lg sm:text-xl md:text-2xl text-slate-400 max-w-2xl px-4"
             >
-                Software Engineer <span className="hidden sm:inline">|</span><span className="sm:hidden block"></span> Machine Learning Engineer <span className="hidden sm:inline">|</span><span className="sm:hidden block"></span> Data Analyst
+                Software Engineer <span className="hidden sm:inline">|</span><span className="sm:hidden block"></span> Machine Learning Engineer <span className="hidden sm:inline"></span>
             </motion.p>
 
             <motion.div
