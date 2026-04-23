@@ -5,10 +5,10 @@ export default function VideoSection() {
     return (
         <section id="video-intro" className="pb-20 overflow-hidden">
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.9, y: 50 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6 }}
+                transition={{ type: "spring", stiffness: 100, damping: 20 }}
             >
                 <h2 className="text-3xl font-bold mb-8 text-center text-slate-100">Introduction Video</h2>
                 <div className="bg-slate-900 p-4 sm:p-8 rounded-3xl shadow-lg shadow-slate-950/50 border border-slate-800 relative overflow-hidden flex flex-col items-center">

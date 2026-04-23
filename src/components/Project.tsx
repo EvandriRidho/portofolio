@@ -9,10 +9,10 @@ export default function Project() {
     return (
         <section id="projects" className="py-20">
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6 }}
+                transition={{ type: "spring", stiffness: 100, damping: 20 }}
             >
                 <div className="flex flex-col items-center mb-12">
                     <h2 className="text-3xl font-bold text-slate-100">Featured Projects</h2>
@@ -23,12 +23,13 @@ export default function Project() {
                     {projects.map((item, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                            initial={{ opacity: 0, scale: 0.8, y: 50 }}
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
-                            whileHover={{ y: -8 }}
-                            className="group bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-sm shadow-slate-950/50 hover:shadow-[0_10px_30px_rgba(59,130,246,0.1)] transition-all duration-300 flex flex-col h-full"
+                            transition={{ type: "spring", stiffness: 100, damping: 20, delay: index * 0.15 }}
+                            whileHover={{ y: -15, scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="group bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-sm shadow-slate-950/50 hover:shadow-[0_20px_40px_rgba(59,130,246,0.15)] transition-shadow duration-300 flex flex-col h-full z-10 hover:z-20 relative"
                         >
                             {/* Gradient Placeholder Images */}
                             <div className={`h-48 w-full bg-gradient-to-br ${item.color} relative overflow-hidden`}>
