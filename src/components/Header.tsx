@@ -1,7 +1,35 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+import { roles } from '@/constants/roles'
 
 export default function Header() {
+    const [text, setText] = useState("")
+    const [isDeleting, setIsDeleting] = useState(false)
+    const [loopNum, setLoopNum] = useState(0)
+    const [typingSpeed, setTypingSpeed] = useState(150)
+
+    useEffect(() => {
+        const handleTyping = () => {
+            const currentRoleIndex = loopNum % roles.length
+            const fullText = roles[currentRoleIndex]
+
+            setText(isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1))
+
+            setTypingSpeed(isDeleting ? 50 : 150)
+
+            if (!isDeleting && text === fullText) {
+                setTimeout(() => setIsDeleting(true), 1500)
+            } else if (isDeleting && text === "") {
+                setIsDeleting(false)
+                setLoopNum(loopNum + 1)
+            }
+        }
+
+        const timer = setTimeout(handleTyping, typingSpeed)
+        return () => clearTimeout(timer)
+    }, [text, isDeleting, loopNum, roles])
+
     return (
         <section id="home" className="relative flex min-h-screen flex-col items-center justify-center text-center py-20 overflow-hidden">
             {/* Background elements */}
@@ -75,9 +103,23 @@ export default function Header() {
                     damping: 20,
                     delay: 0.4
                 }}
-                className="mt-6 text-lg sm:text-xl md:text-2xl text-slate-400 max-w-2xl px-4"
+                className="mt-6 text-lg sm:text-xl md:text-2xl text-slate-400 max-w-2xl px-4 flex items-center justify-center h-8"
             >
-                Software Engineer <span className="hidden sm:inline">|</span><span className="sm:hidden block"></span> Data Scientist
+                <span className="font-semibold text-white">
+                    {text}
+                </span>
+
+                <motion.span
+                    animate={{ opacity: [0, 1, 0] }}
+                    transition={{
+                        repeat: Infinity,
+                        duration: 0.8,
+                        ease: "linear"
+                    }}
+                    className="ml-1 text-slate-400 font-light"
+                >
+                    |
+                </motion.span>
             </motion.p>
 
             <motion.div
