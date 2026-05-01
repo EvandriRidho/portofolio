@@ -1,5 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import TechStackCard from "./TechStackCard";
+import { techStackItems } from "@/constants/techStackItems";
 
 export default function AboutMe() {
     return (
@@ -23,7 +25,7 @@ export default function AboutMe() {
                             transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.1 }}
                             className="text-slate-300 leading-relaxed text-lg"
                         >
-                            As a final-year Information Technology student at Universitas Gunadarma, I am deeply passionate about building data-driven solutions and innovative digital platforms. I have cultivated a robust technical foundation in Python, TypeScript, and PHP, which allows me to seamlessly bridge the gap between complex analytical logic and engaging user experiences. I approach my work with a strong sense of purpose, driven by a commitment to continuous growth and building tools that create real value.
+                            I am a final-year Informatics student with a "learn-by-doing" mindset, dedicated to building scalable applications that solve real-world business problems. My expertise lies at the intersection of Full-stack Development and Data Science, allowing me to build robust systems while integrating intelligent, data-driven solutions.
                         </motion.p>
 
                         <motion.p
@@ -33,8 +35,23 @@ export default function AboutMe() {
                             transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.2 }}
                             className="text-slate-300 leading-relaxed text-lg"
                         >
-                            My hands-on experience spans across several impactful projects where I take full ownership of the technical and architectural decisions I make. I developed "Tomato Leaf Diseases," a machine learning-based detection system that leverages computer vision to identify agricultural anomalies. Furthermore, I engineered end-to-end digital platforms like "Rizquna Bakery", "GameShelf", and "SparePart Monitoring". In every project I undertake, I stand firmly and proudly by my execution, ensuring the delivery of scalable, efficient, and well-crafted applications.
+                            What sets me apart is my experience in a hybrid role at PT Pelita Air Service. By combining Frontend Development with Business Analysis, I learned to translate complex stakeholder requirements into actionable technical specifications (BRDs & FRDs). I don't just write code; I build tools that align with business goals.
                         </motion.p>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.25 }}
+                            className="pt-4"
+                        >
+                            <h3 className="text-slate-200 font-semibold text-xl mb-4">Core Technical Stack</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                {techStackItems.map((item) => (
+                                    <TechStackCard key={item.id} item={item} />
+                                ))}
+                            </div>
+                        </motion.div>
 
                         <motion.p
                             initial={{ opacity: 0, x: -50 }}
@@ -43,7 +60,7 @@ export default function AboutMe() {
                             transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.3 }}
                             className="text-slate-300 leading-relaxed text-lg"
                         >
-                            Beyond my technical capabilities, I bring strong problem-solving skills, efficient time management, and a collaborative yet highly independent mindset to the table. I am currently seeking opportunities as a Data Analyst or Software Engineer, where I can leverage my expertise to tackle complex challenges head-on. I am eager to bring my authentic self and technical adaptability to a forward-thinking team, ready to contribute to meaningful and impactful digital solutions.
+                            I thrive in fast-paced environments and am always looking to push my technical boundaries. Whether it's architecting a web platform or developing computer vision models, I am ready to bring a blend of technical engineering and business understanding to a forward-thinking team.
                         </motion.p>
                     </div>
                 </div>
